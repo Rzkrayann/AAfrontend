@@ -1,0 +1,33 @@
+
+
+@if (!isLogged()){
+
+  <form
+    ngForm
+    (submit)="login()"
+     >
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input
+        matInput
+        [(ngModel)]="username"
+        name="username">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter your password</mat-label>
+      <input matInput
+             [(ngModel)]="password"
+              name="password"
+             [type]="hide() ? 'password' : 'text'" />
+
+    </mat-form-field>
+    <button mat-raised-button>Submit</button>
+  </form>
+}
+@else{
+  <p>You're already logged ! </p>
+  <button mat-raised-button (click)="logout()">Logout</button>
+}
+
+
+

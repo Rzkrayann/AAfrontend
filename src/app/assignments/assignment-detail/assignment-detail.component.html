@@ -1,0 +1,23 @@
+
+
+<mat-card class="example-card" appearance="outlined" *ngIf="receivedAssignment">
+  <mat-card-header>
+    <mat-card-title>{{receivedAssignment.name}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{receivedAssignment.date | date}}</p>
+  </mat-card-content>
+  <mat-card-footer class="example-card-footer">
+    @if (isLogged()){
+      <mat-chip-set aria-label="Chihuahua traits">
+        <mat-chip *ngIf="receivedAssignment.isDone">DONE</mat-chip>
+        <mat-chip *ngIf="!receivedAssignment.isDone">NOT DONE</mat-chip>
+        <mat-checkbox [checked]="receivedAssignment.isDone" (change)="onCheckboxChange(receivedAssignment,$event)" [disabled]="!isLogged()"></mat-checkbox>
+        <button mat-raised-button color="primary" (click)="onClickEdit()"[disabled]="!isAdmin()">Edit</button>
+        <button mat-raised-button color="primary" (click)="onDeleteAssignment()" [disabled]="!isAdmin()">Delete</button>
+      </mat-chip-set>
+
+    }
+
+  </mat-card-footer>
+</mat-card>

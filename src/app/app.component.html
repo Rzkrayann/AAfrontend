@@ -1,0 +1,47 @@
+<div>
+
+  <nav><a routerLink="/home"></a></nav>
+<!--  <mat-slide-toggle color="primary" (click)="login()">loggin</mat-slide-toggle>-->
+
+</div>
+
+
+<mat-drawer-container class="example-container" autosize>
+<mat-toolbar>
+  <button  mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()" >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Online Homeworks System</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button routerLink="/home">
+    <mat-icon>home</mat-icon>
+  </button>
+  <button mat-icon-button routerLink="/logging">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+
+  <router-outlet></router-outlet>
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+    <button mat-raised-button routerLink="/home">
+      Homeworks List
+    </button>
+    <button mat-raised-button [disabled]="!isAdmin()" routerLink="/add">
+      Add Homework
+    </button>
+    <button mat-raised-button [disabled]="!isAdmin()" routerLink="/home">
+      Modify Homework
+    </button>
+    <button mat-raised-button [disabled]="!isAdmin()" routerLink="/home">
+      Delete Homework
+    </button>
+    <button mat-raised-button [disabled]="!isAdmin()" (click)="generateData()">
+      Generate test datas
+    </button>
+  </mat-drawer>
+
+
+
+</mat-drawer-container>
