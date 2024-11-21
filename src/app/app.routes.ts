@@ -8,6 +8,7 @@ import {LoggingComponent} from "./logging/logging.component";
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '', component: AssignmentsComponent},
   {path: 'home', component: AssignmentsComponent},
   {path: 'add', component: AddAssignmentComponent},
   {path: 'assignment/:id', component: AssignmentDetailComponent},
