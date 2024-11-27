@@ -1,50 +1,50 @@
 <link href="https://fonts.cdnfonts.com/css/terminal" rel="stylesheet">
-<body>
-  <p>{{title}}</p>
+
+<p>{{title}}</p>
 
 
 
-  @if (isAdmin()){
-    <div>
-      <a routerLink="/add">
-        <button mat-flat-button (click)="onAddAssignement()">Add homeworks</button>
-      </a>
-    </div>
-  }
+@if (isAdmin()){
+  <div>
+    <a routerLink="/add">
+      <button mat-flat-button (click)="onAddAssignement()">Add homeworks</button>
+    </a>
+  </div>
+}
 
-  <!--@if(formVisible){-->
-  <!--  <app-add-assignment  (assignementAdded)="onAssignementAdded($event)"></app-add-assignment>-->
-  <!--}-->
+<!--@if(formVisible){-->
+<!--  <app-add-assignment  (assignementAdded)="onAssignementAdded($event)"></app-add-assignment>-->
+<!--}-->
 
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
 
-  <mat-paginator [length]=totalDocs
-                 [pageSize]="10"
-                 [pageSizeOptions]="[5, 10, 25, 100]"
-                 (page)="onPageChange($event)"
-                 aria-label="Select page">
-  </mat-paginator>
-  <mat-list>
-    @for(a of assignements; track a){
-      @if(a.isDone){
-        <nav><a routerLink="/assignment/{{a.id}}">
-        <mat-list-item appDone class="list-item" (click)="onClickAssignment(a)">
-          Work on {{a.name}} for {{a.date | date}} is done !
-  <!--        <mat-checkbox [checked]="a.isDone" (change)="onCheckboxChange(a,$event)"></mat-checkbox>-->
-        </mat-list-item>
-        </a></nav>
-      } @else {
-        <nav><a routerLink="/assignment/{{a.id}}">
-        <mat-list-item appNotDone class="list-item" (click)="onClickAssignment(a)">
-          Work on {{a.name}} for {{a.date | date}} not done !
-  <!--        <mat-checkbox [checked]="a.isDone" (change)="onCheckboxChange(a,$event)"></mat-checkbox>-->
-        </mat-list-item>
-        </a></nav>
-
-      }
+<mat-paginator [length]=totalDocs
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               (page)="onPageChange($event)"
+               aria-label="Select page">
+</mat-paginator>
+<mat-list>
+  @for(a of assignements; track a){
+    @if(a.isDone){
+      <nav><a routerLink="/assignment/{{a.id}}">
+      <mat-list-item appDone class="list-item" (click)="onClickAssignment(a)">
+        Work on {{a.name}} for {{a.date | date}} is done !
+<!--        <mat-checkbox [checked]="a.isDone" (change)="onCheckboxChange(a,$event)"></mat-checkbox>-->
+      </mat-list-item>
+      </a></nav>
+    } @else {
+      <nav><a routerLink="/assignment/{{a.id}}">
+      <mat-list-item appNotDone class="list-item" (click)="onClickAssignment(a)">
+        Work on {{a.name}} for {{a.date | date}} not done !
+<!--        <mat-checkbox [checked]="a.isDone" (change)="onCheckboxChange(a,$event)"></mat-checkbox>-->
+      </mat-list-item>
+      </a></nav>
 
     }
-  </mat-list>
-  <!--<app-assignment-detail [receivedAssignment]="assignmentClicked"-->
-  <!--&gt;</app-assignment-detail>-->
-</body>
+
+  }
+</mat-list>
+<!--<app-assignment-detail [receivedAssignment]="assignmentClicked"-->
+<!--&gt;</app-assignment-detail>-->
+
