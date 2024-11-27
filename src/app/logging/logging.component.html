@@ -1,4 +1,7 @@
 
+<div>
+  <p>C:\Users\ROOT> ./ssh login request</p>
+</div>
 
 @if (!isLogged()){
 
@@ -25,8 +28,10 @@
   </form>
 }
 @else{
-  <p>You're already logged ! </p>
-  <button mat-raised-button (click)="logout()">Logout</button>
+  <div class="logged">
+    <p>You're already logged ! </p>
+    <button mat-raised-button (click)="logout()">Logout</button>
+  </div>
 }
 
 

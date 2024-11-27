@@ -1,0 +1,28 @@
+p{
+
+  font-family: 'Terminal', sans-serif;
+  font-size: 30px;
+}
+
+.header{
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 20px;
+}

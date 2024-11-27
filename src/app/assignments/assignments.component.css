@@ -1,11 +1,41 @@
+/* Global styles */
+body {
+  font-family: 'Terminal', sans-serif;
+}
+
+p{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
 .list-item{
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    padding: 10px;
+    padding: 30px;
     border: 1px solid #dee2e6;
-    border-radius: 5px;
+    border-radius: 50px;
     margin-bottom: 10px;
+}
+
+mat-list{
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+button{
+  font-family: 'Terminal', sans-serif;
+  border-radius: 0px;
+  border: 1px solid red;
 }
 
 

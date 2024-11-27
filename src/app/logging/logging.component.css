@@ -1,0 +1,39 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  margin-bottom: 20px;
+}
+
+button {
+  align-self: center;
+  border: 1px solid red;
+  border-radius: 0px;
+}
+
+p{
+
+  font-family: 'Terminal', sans-serif;
+  font-size: 30px;
+}
+
+div{
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+
+}
+
+.logged{
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+
+}

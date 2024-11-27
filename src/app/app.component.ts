@@ -10,6 +10,7 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {AuthService} from "./shared/auth.service";
 import {AssignmentsService} from "./shared/assignments.service";
 import {assignments} from "./shared/data";
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ import {assignments} from "./shared/data";
   imports: [RouterOutlet, AssignmentsComponent,
     MatIconModule,
     MatButtonModule, MatToolbar,
-    MatDrawerContainer, MatSidenavModule, RouterLink, MatSlideToggleModule
+    MatDrawerContainer, MatSidenavModule, RouterLink, MatSlideToggleModule, NgOptimizedImage
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -46,11 +47,10 @@ export class AppComponent {
 
   generateData(){
     // create assignments with data.ts file
-    // read data.ts
     // for each assignment, call addAssignment()
     assignments.forEach(assignment => {
       this.assignmentsService.addAssignment(assignment).subscribe(message => console.log(message));
-      //wait for 1 second
+      //wait for 20 seconds
       setTimeout(() => {
         window.location.reload();
       }, 20000);

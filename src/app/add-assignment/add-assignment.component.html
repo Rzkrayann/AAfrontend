@@ -1,28 +1,33 @@
-<form
-  ngForm
-  #assignementForm
-  (submit)="onSubmit($event); assignementForm.reset()" >
-<mat-form-field>
-  <mat-label>Name</mat-label>
-  <input
-    matInput
-    [(ngModel)]="name"
-    name="name">
-</mat-form-field>
-
+<div class="header">
+  <p>C:\Users\ROOT> vim mongoDB/Assignments/details.json</p>
+</div>
+<div class="container">
+  <form
+    ngForm
+    #assignementForm
+    (submit)="onSubmit($event); assignementForm.reset()" >
   <mat-form-field>
-    <mat-label>Choose a date</mat-label>
-    <input matInput
-           [matDatepicker]="picker"
-           [(ngModel)]="date"
-           name="date"
-    >
-    <mat-datepicker-toggle matIconSuffix
-                           [for]="picker"></mat-datepicker-toggle
-    >
-    <mat-datepicker #picker></mat-datepicker>
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      [(ngModel)]="name"
+      name="name">
   </mat-form-field>
 
-  <button mat-raised-button>Add</button>
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput
+             [matDatepicker]="picker"
+             [(ngModel)]="date"
+             name="date"
+      >
+      <mat-datepicker-toggle matIconSuffix
+                             [for]="picker"></mat-datepicker-toggle
+      >
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
 
-</form>
+    <button mat-raised-button>Add</button>
+
+  </form>
+</div>

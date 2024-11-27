@@ -77,6 +77,7 @@ export class AssignmentsService {
       );
       //console.log(id2);
     }
+    assignment.id = Math.floor(Math.random() * 10000);
     return this.http.post<Assignment>(this.backEndUrl, assignment);
   }
 

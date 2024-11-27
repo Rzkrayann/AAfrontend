@@ -1,0 +1,25 @@
+mat-card{
+    padding: 20px;
+    border-radius: 50px;
+    border: 1px solid red;
+    margin-right: 20%;
+    margin-left: 20%;
+    font-family: 'Terminal', sans-serif;
+    background-color: black;
+    text-align: right;
+    color: white;
+}
+
+p{
+
+  font-family: 'Terminal', sans-serif;
+  font-size: 30px;
+}
+
+div{
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+
+}
+
