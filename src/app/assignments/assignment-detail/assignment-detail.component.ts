@@ -50,7 +50,6 @@ export class AssignmentDetailComponent implements OnInit {
       console.log(message);
       this.router.navigate(['/home']);
     });
-    //this.receivedAssignment = undefined!;
 
   }
 

@@ -44,7 +44,6 @@ export class AssignmentsComponent implements OnInit {
 
   constructor(private assignmentsService: AssignmentsService, private authService:AuthService) { }
     ngOnInit(): void {
-    //this.assignmentsService.getAssignments().subscribe(assignements => this.assignements = assignements);
     this.assignmentsService.getAssignmentsPagine(this.page, this.limit).subscribe(data => {
       this.assignements = data.docs;
       this.totalDocs = data.totalDocs;
@@ -61,15 +60,7 @@ export class AssignmentsComponent implements OnInit {
 
   onAddAssignement() {
    console.log("Btn clicked");
-
-   //this.formVisible = true;
   }
-  //
-  // onAssignementAdded(newAssignement: Assignment) {
-  //   //this.assignements.push(newAssignement);
-  //   this.assignmentsService.addAssignment(newAssignement).subscribe(message => console.log(message));
-  //   this.formVisible = false;
-  // }
 
   onCheckboxChange(assignement: Assignment, event: MatCheckboxChange) {
     this.assignmentsService.updateAssignment(assignement,event).subscribe(message => console.log(message));

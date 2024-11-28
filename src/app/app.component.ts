@@ -28,14 +28,7 @@ export class AppComponent {
   showFiller = false;
 
   constructor (private authService: AuthService, private router:Router, private assignmentsService: AssignmentsService) {}
-  // login() {
-  //   if(!this.authService.loggedIn) {
-  //     this.authService.login();
-  //   }else {
-  //     this.authService.logout();
-  //     this.router.navigate(['/home']);
-  //   }
-  // }
+
 
   isAdmin():boolean{
     return this.authService.isAdmin();

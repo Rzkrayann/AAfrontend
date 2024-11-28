@@ -45,26 +45,6 @@ export class EditAssignmentComponent {
     this.assignmentsService.getAssignement(id).subscribe(assignment => this.assignment = assignment);
   }
 
-  // onSaveAssignment() {
-  //   if (!this.assignment)
-  //     return;
-  //   if (this.nomAssignment == '' || this.dateDeRendu === undefined)
-  //     return;
-  //
-  //   // on récupère les valeurs dans le formulaire
-  //   this.assignment.name = this.nomAssignment;
-  //   this.assignment.date = this.dateDeRendu;
-  //   this.router.navigate(['/home']);
-  //   // this.assignmentsService
-  //   //   .updateAssignment(this.assignment)
-  //   //   .subscribe((message) => {
-  //   //     console.log(message);
-  //   //
-  //   //     // navigation vers la home page
-  //   //     this.router.navigate(['/home']);
-  //   //   });
-  // }
-
   onSaveAssignment() {
     if (!this.assignment)
       return;

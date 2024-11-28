@@ -58,7 +58,6 @@ export class AddAssignmentComponent implements OnInit{
       isDone: false
     };
     console.log(newAssignement);
-    //this.assignementAdded.emit(newAssignement);
     this.assignmentsService.addAssignment(newAssignement).subscribe(message => console.log(message));
   }
 }
